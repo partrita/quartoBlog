@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Taeyoon kim">
-<meta name="dcterms.date" content="2023-10-07">
+<meta name="dcterms.date" content="2023-09-17">
 
 <title>Biohacker - 파이썬 통계분석하기</title>
 <style>
@@ -198,7 +198,7 @@ gtag('config', 'GTM-NHHK2BF', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 7, 2023</p>
+      <p class="date">September 17, 2023</p>
     </div>
   </div>
   
@@ -233,9 +233,13 @@ gtag('config', 'GTM-NHHK2BF', { 'anonymize_ip': true});
 <p><code>brain_size</code> 데이터는 <strong>Willerman</strong>이 1991년에 사람의 뇌 크기와 무게, 그리고 IQ에 대하여 측정한 값입니다. 범주형의 데이터와 수치형 데이터로 구성 되어 있죠.</p>
 <p>Pandas의 read_csv 기능을 이용해 데이터프레임을 만들어 보겠습니다.</p>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'http://www.scipy-lectures.org/_downloads/brain_size.csv'</span>,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                 sep <span class="op">=</span> <span class="st">';'</span>, index_col<span class="op">=</span> <span class="dv">0</span>, na_values<span class="op">=</span><span class="st">'.'</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df.head() <span class="co"># 상단의 5개의 데이터 확인하기</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"http://www.scipy-lectures.org/_downloads/brain_size.csv"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    sep<span class="op">=</span><span class="st">";"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    index_col<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    na_values<span class="op">=</span><span class="st">"."</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>df.head()  <span class="co"># 상단의 5개의 데이터 확인하기</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
@@ -428,8 +432,9 @@ gtag('config', 'GTM-NHHK2BF', { 'anonymize_ip': true});
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting data</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas.plotting <span class="im">import</span> scatter_matrix</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 키와 몸무게, MRI_count </span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>scatter_matrix(df[[<span class="st">'Weight'</span>, <span class="st">'Height'</span>, <span class="st">'MRI_Count'</span>]])  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 키와 몸무게, MRI_count</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>scatter_matrix(df[[<span class="st">"Weight"</span>, <span class="st">"Height"</span>, <span class="st">"MRI_Count"</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000A1D2B70&gt;,
         &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000A443668&gt;,
@@ -448,7 +453,7 @@ gtag('config', 'GTM-NHHK2BF', { 'anonymize_ip': true});
 <p>키와 몸무계는 서로 연관이 있는듯 하고 나머지는 그다지 서로 연관이 없어 보입니다.</p>
 <p>그 다음으로는 여러 IQ 수치간에 상관관계를 알아 보죠.</p>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>scatter_matrix(df[[<span class="st">'PIQ'</span>, <span class="st">'VIQ'</span>, <span class="st">'FSIQ'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>scatter_matrix(df[[<span class="st">"PIQ"</span>, <span class="st">"VIQ"</span>, <span class="st">"FSIQ"</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000A9AD6A0&gt;,
         &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000A9F34A8&gt;,
@@ -487,7 +492,7 @@ gtag('config', 'GTM-NHHK2BF', { 'anonymize_ip': true});
 </div>
 <div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Student’s t-test: the simplest statistical test</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>stats.ttest_1samp(df[<span class="st">'VIQ'</span>], <span class="dv">0</span>) </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>stats.ttest_1samp(df[<span class="st">"VIQ"</span>], <span class="dv">0</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># VIQ의 평균값이 0과 통계적으로 유의미하게 다른지 알아 보겠습니다.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>Ttest_1sampResult(statistic=30.088099970849328, pvalue=1.3289196468728067e-28)</code></pre>
@@ -501,11 +506,11 @@ gtag('config', 'GTM-NHHK2BF', { 'anonymize_ip': true});
 <p>예를 들어 여자의 VIQ와 남자의 VIQ의 평균은 통계적으로 차이가 있는지 알아 보겠습니다.</p>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 여자의 VIQ</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>female_viq <span class="op">=</span> df[df[<span class="st">'Gender'</span>] <span class="op">==</span> <span class="st">'Female'</span>][<span class="st">'VIQ'</span>]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>female_viq <span class="op">=</span> df[df[<span class="st">"Gender"</span>] <span class="op">==</span> <span class="st">"Female"</span>][<span class="st">"VIQ"</span>]</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 남자의 VIQ</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>male_viq <span class="op">=</span> df[df[<span class="st">'Gender'</span>] <span class="op">==</span> <span class="st">'Male'</span>][<span class="st">'VIQ'</span>]</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>male_viq <span class="op">=</span> df[df[<span class="st">"Gender"</span>] <span class="op">==</span> <span class="st">"Male"</span>][<span class="st">"VIQ"</span>]</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 두개의 리스트를 가지고 t-test실행</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>stats.ttest_ind(female_viq, male_viq) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>stats.ttest_ind(female_viq, male_viq)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>Ttest_indResult(statistic=-0.77261617232750113, pvalue=0.44452876778583217)</code></pre>
 </div>
@@ -523,8 +528,8 @@ gtag('config', 'GTM-NHHK2BF', { 'anonymize_ip': true});
 <p>먼저, 전체적인 데이터의 모습을 알기 위한 <strong>boxplot</strong>을 그려보겠습니다.</p>
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Box plots of different columns for each gender</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>groupby_gender <span class="op">=</span> df.groupby(<span class="st">'Gender'</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>groupby_gender.boxplot(column<span class="op">=</span>[<span class="st">'FSIQ'</span>, <span class="st">'VIQ'</span>, <span class="st">'PIQ'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>groupby_gender <span class="op">=</span> df.groupby(<span class="st">"Gender"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>groupby_gender.boxplot(column<span class="op">=</span>[<span class="st">"FSIQ"</span>, <span class="st">"VIQ"</span>, <span class="st">"PIQ"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>Female         AxesSubplot(0.1,0.15;0.363636x0.75)
 Male      AxesSubplot(0.536364,0.15;0.363636x0.75)
@@ -536,7 +541,7 @@ dtype: object</code></pre>
 </div>
 <div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2-sample t-test</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>stats.ttest_ind(df[<span class="st">'FSIQ'</span>], df[<span class="st">'PIQ'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>stats.ttest_ind(df[<span class="st">"FSIQ"</span>], df[<span class="st">"PIQ"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>Ttest_indResult(statistic=0.46563759638096403, pvalue=0.64277250094148408)</code></pre>
 </div>
@@ -544,9 +549,9 @@ dtype: object</code></pre>
 <p>T-test 결과 p-value가 0.64로 매우 높기 때문에 기무가설을 기각하지 못합니다. 따라서, FSIQ와 PIQ값에 통계적으로 유의적인 차이는 없다고 볼 수 있습니다.</p>
 <p>여기서 한가지 문제 점이 있는데, 각각의 FSIQ와 PIQ값은 같은 개인에서 측정되었기 때문에, <strong>paried T-test</strong> 으로 추가적인 확인이 필요합니다.</p>
 <div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>stats.ttest_rel(df[<span class="st">'FSIQ'</span>], df[<span class="st">'PIQ'</span>])  </span>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>stats.ttest_rel(df[<span class="st">"FSIQ"</span>], df[<span class="st">"PIQ"</span>])</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This is equivalent to a 1-sample test on the difference:</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># stats.ttest_1samp(df['FSIQ'] - df['PIQ'], 0) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># stats.ttest_1samp(df['FSIQ'] - df['PIQ'], 0)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>Ttest_relResult(statistic=1.7842019405859857, pvalue=0.082172638183642358)</code></pre>
 </div>
@@ -562,7 +567,7 @@ dtype: object</code></pre>
 <div class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.formula.api <span class="im">import</span> ols</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> ols(<span class="st">'VIQ ~ Gender + MRI_Count + Height'</span>, df).fit()</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> ols(<span class="st">"VIQ ~ Gender + MRI_Count + Height"</span>, df).fit()</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.f_test([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -608,20 +613,23 @@ strong multicollinearity or other numerical problems.
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># our different variables</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill in the missing values for Height for plotting</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Height'</span>].fillna(method<span class="op">=</span><span class="st">'pad'</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"Height"</span>].fillna(method<span class="op">=</span><span class="st">"pad"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The parameter 'c' is passed to plt.scatter and will control the color</span></span>
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="co"># The same holds for parameters 'marker', 'alpha' and 'cmap', that</span></span>
 <span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co"># control respectively the type of marker used, their transparency and</span></span>
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co"># the colormap</span></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>scatter_matrix(df[[<span class="st">'VIQ'</span>, <span class="st">'MRI_Count'</span>, <span class="st">'Height'</span>]],</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>                        c<span class="op">=</span>(df[<span class="st">'Gender'</span>] <span class="op">==</span> <span class="st">'Female'</span>), marker<span class="op">=</span><span class="st">'o'</span>,</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>                        alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.gcf()</span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">"purple: male, yellow: female"</span>, size<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>scatter_matrix(</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    df[[<span class="st">"VIQ"</span>, <span class="st">"MRI_Count"</span>, <span class="st">"Height"</span>]],</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    c<span class="op">=</span>(df[<span class="st">"Gender"</span>] <span class="op">==</span> <span class="st">"Female"</span>),</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">"o"</span>,</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.7</span>,</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.gcf()</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">"purple: male, yellow: female"</span>, size<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="python_Statistics_files/figure-html/cell-14-output-1.png" class="img-fluid"></p>
 </div>

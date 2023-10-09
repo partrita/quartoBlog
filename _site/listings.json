@@ -2,10 +2,14 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/welcome/index.html",
       "/posts/python_StatisticalTesting.html",
       "/posts/python_Statistics.html",
-      "/posts/learn_jupyter.html"
+      "/posts/R_Seurat_tutorials.html",
+      "/posts/miniforge/index.html",
+      "/posts/R_ggpubr.html",
+      "/posts/lab_protocols/lab_protocols.html",
+      "/posts/learn_jupyter.html",
+      "/posts/python_TidyData.html"
     ]
   }
 ]

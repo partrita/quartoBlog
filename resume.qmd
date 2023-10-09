@@ -16,96 +16,30 @@ Biologist, data scientist, and hobbyist coder
 </div>
 
 
-## Currently
+# Currently
 
-__NCSOFT__ 엔씨 (South Korea), Lead of Data Center
+**HANALL biopharma** (South Korea), Scientist
 
 ### Specialized in
 
-Data analytics, Economics 
+Data analytics, Drug discovery 
 
 ### Research interests
 
-- Econometric analysis on online gaming behaviors 
-- Real-money trading in online games
-- Game theory 
-
-## Employment 
-
-`2019.02 -- present`
-__NCSOFT__, Data Center (Seongnam Gyeonggi  &#183; South Korea)
-- Lead (executive director)
-- managing the group of data scientists
-
-`2018.03 -- 2019.01`
-__NCSOFT__, I&I Division 
-- Lead 
-
-`2014.08 -- 2018.03`
-__NCSOFT__, R&I Team
-- Lead 
-
- `2013.05 -- 2014.07`
-__KISDI__$^*$ (Jinchun Chungchungbuk  &#183; South Korea)
-- $*$ Korea Information Society Development Institute 정보통신정책연구원
-- Senior Researcher (Telecommunication Unit)
-
-`2012.01 -- 2013.03`
-__FourThirtyThree__ 네시삼십삼분 (Seoul  &#183; South Korea)
-- Data Analyst, Consultant 
-
-`2011.03 -- 2012.02`
-__Seoul National University__ 서울대학교 (Seoul  &#183; South Korea) 
-- Postdoc., School of Economics 
-
-## Education
-
-`2010`
-__Seoul National University__ (Seoul  &#183; South Korea)
-- Ph.D. School of Economics
-- Title: "Three Essays on Evolutionary Game Theory and Its Economic Applications"
-
-`1997`
-__Seoul National University__
-- M.A. School of Economics 
-
-`1995`
-__Seoul National University__ 
-- B.A. School of Economics
-
-## Selected Publications
-
-### Books and book chapters 
-
-`2009`
-Jun Sok Huhh. "The Evolution of PC bang Culture in Korea (Chapter 7)." *Gaming Cultures and Place in Asia-Pacific* [edited by Larissa Hjorth, Dean Chan]. Routledge.
-
-`2006`
-Jun Sok Huhh. 2006. *Business of Fun–Economics of computer games industry* 재미의 비즈니스. ChekSeSang. [Korean language]
-
-### Journals
-
-`2017`
-Jun Sok Huhh and Jeong Wook Byun. "North Korea’s Nuclear Weapon Development and South Korea’s Strategic Reaction: A Signaling Game Approach." *Ehwa Journal of Social Sciences* 33(1): 107--142. [Korean language]
-
-`2012`
-Jun Sok Huhh and Jung-Kyu Choi. 2012. "The Decay in Contributions in a Public Goods Game: Learning Hypothesis, Strategy Hypothesis and Reciprocity Hypothesis Revisited." *Journal of Econometric Theory and Econometrics* 23(2):165--186. [Korean language]
-
-`2008`
-Jun Sok Huhh. 2008. "Culture and Business of PC Bangs in Korea." *Games and Culture* 3(1):26--37.
+- scRNA seq data analysis
+- *de novo* protein design
+- *in silico* protein engineering
 
 ## Technical Skills 
 
-__Proficient__
-Python, R, Mathematica, $\rm \LaTeX$, markdown
+**Proficient**
+Python, R, Linux, $\rm \LaTeX$, markdown
 
-__Familiar__
-NetLogo, Docker, Kubernetes
-
----
+**Familiar**
+Docker, Tensorflow, pyTorch, Django, DOE
 
 
-## Work Experience
+# Work Experience
 
 ### Scientist, HANALL biopharma <sup>2022-PRESENT</sup>
 *Suwon-si, South Korea, <http://en.hanall.co.kr/>*
@@ -153,8 +87,7 @@ Support research and development group for diagnosis of HIV
 - Testing HIV detection kits
 
 
-## Education
-
+# Education
 
 ### Master of Science, Structural biology<sup>2013-2015 </sup>
 *POSTECH, Pohang*
@@ -173,33 +106,6 @@ Support research and development group for diagnosis of HIV
 - (특허)PVR 및 4-1BBL을 포함하는 융합단백질 및 이의 용도, 출원번호:1020170054798, 2017
 - [ATP‐dependent DNA binding, unwinding, and resection by the Mre11/Rad50 complex, EMBO, 2015](https://www.ncbi.nlm.nih.gov/pubmed/26717941)
 - [Natronomonas Gomsonensis Sp. Nov., Isolated from a Solar Saltern, Antonie van Leeuwenhoek, 2013](https://www.ncbi.nlm.nih.gov/pubmed/23851717)   
-
-
-
-# Skills
-
-```
-Computer science{
-    “Machine learning”,
-    “Web scraping”,
-    “Web development”,
-    “Python”, “R”,  
-    “Tensorflow”,
-    "linux",
-}
-Statistics{
-    “Design of experiments”,
-    “T-test, ANOVA”,
-    “Naïve Bayes Classification”,
-}
-Biotech{
-    “Mammalian cell culture”,
-    “Protein purification by AKTA system” ,
-    “Physicochemical analysis by HPLC”,
-    “Bioinformatics”,
-}
-
-```
 
 
 # References

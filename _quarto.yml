@@ -9,6 +9,7 @@ website:
   google-analytics: "GTM-NHHK2BF"
   # (additional metadata excluded for brevity)
   # margin-header: subscribe.html
+  # body-header: "google_analytics.html"
   navbar:
     right:
       - about.qmd
